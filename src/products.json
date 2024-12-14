@@ -1,0 +1,145 @@
+[
+  {
+    "id": "3",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "4",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "7",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Juda",
+    "code": "1522sen",
+    "price": 4200,
+    "status": "success",
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "8",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "9",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "10",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "11",
+    "title": "Melena de gato",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "14",
+    "title": "Melena de luciernaga",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "16",
+    "title": "Melena de perro",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "17",
+    "title": "Melena de chancho",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "18",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "19",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "20",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  }
+]
