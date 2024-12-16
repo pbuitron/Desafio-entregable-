@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const rutaProducts = path.join(__dirname, '../products.json');
+export const rutaProducts = path.join(__dirname, '../products.json');
 
 export let contadorItemProducts = 1
 
@@ -16,7 +16,7 @@ export const inicializarArchivoProducts = async (rutaProducts) => {
 
         if (!existsSync(rutaProducts)) {
             await fs.writeFile(rutaProducts, JSON.stringify([]));
-
+            contadorItemProducts = 1
             console.log('Archivo creado satisfactoriamente');
             return
         }
@@ -94,7 +94,7 @@ export const agregarProducto = async (req, res) => {
         return res.status(406).json({ error: 'Todos los campos son obligatorios excepto thumbnails' });
     }
     const newProduct = {
-        id: contadorItemProducts.toString(),
+        id: contadorItemProducts,
         title,
         description,
         code,
@@ -117,7 +117,7 @@ export const obtenerTodo = async (req, res) => {
 export const actualizarProducto = async (req, res) => {
     const products = await leerProducts(rutaProducts);
     const productId = parseInt(req.params.pid);
-    const productIndex = products.findIndex(p => p.id == productId);
+    const productIndex = products.findIndex(p => p.id === productId);
 
     if (productIndex === -1) {
         console.log('No se encontró el producto solicitado');
@@ -144,12 +144,13 @@ export const actualizarProducto = async (req, res) => {
 export const borrarProducto = async (req, res) => {
     const products = await leerProducts(rutaProducts);
     const productId = parseInt(req.params.pid);
-    const productIndex = products.findIndex(p => p.id == productId);
+    const productIndex = products.findIndex(p => p.id === productId);
     if (productIndex === -1) {
         console.log('No se encontró el producto solicitado');
         return res.status(404).send('Producto no encontrado');
     }
     products.splice(productIndex, 1);
+    console.log('Producto eliminado');
     await fs.writeFile(rutaProducts, JSON.stringify(products, null, 2));
     res.status(200).json(products);
 
