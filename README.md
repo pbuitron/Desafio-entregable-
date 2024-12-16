@@ -1,50 +1,31 @@
-# Productos y sus Metodos
+# CartsRouter y sus Metodos
+El carrito contiene 2 rutas, las cuales se detallan a continuación:
 
-Para el manejo de productos, el cual tendrá su router en /api/products/ , configurar las siguientes rutas:
 
+## La ruta raíz POST /
 
-## La ruta raíz GET /
-
-Lista todos los productos de la base. (Incluyendo la limitación ?limit)
+Crea un nuevo carrito con la siguiente estructura:
+- **id**: Number
+- **products**: Array vacio que contendrá objetos que representan a cada producto
 
 
 ```bash
-http://localhost:8080/api/products
+http://localhost:8080/api/carts
 ```
-## La ruta GET /:pid
-Trae sólo el producto con el id proporcionado
+## La ruta GET /:cid
+Trae todos los productos que pertenezcan a el id proporcionado
 
 ```bash
-http://localhost:8080/api/products/1
+http://localhost:8080/api/carts/1
 ```
 
 ## La ruta raíz POST /
+
+- Agrega el producto al arreglo **products** del carrito selecciponado, agregando un objeto con el siguiente formato:
+- **product**: el cual cuenta con un id unico.
+-- **quantity** el cual contiene el numero de ejemplares de dicho producto, el cual se agrega de uno en uno. 
+-- Además, si un producto ya existente intenta agregarse al producto, incrementar el campo quantity de dicho producto
+
 ```bash
-http://localhost:8080/api/products
+http://localhost:8080/api/:cid/product/:pid
 ```
-Agregar un nuevo producto con los campos:
-- **id**: Number/String (A tu elección, el id NO se manda desde body, se autogenera asegurando que NUNCA se repetirán los ids en el archivo.
-- **title**:String,
-- **description**:String
-- **code**:String
-- **price**:Number
--**status**:Boolean
-- **stock**:Number
-- **category**:String
-- **thumbnails**: Array de Strings que contenga las rutas donde están almacenadas las imágenes referentes a dicho producto
-- **status es true por defecto.
-Todos los campos son obligatorios, a excepción de thumbnails**
-
-## La ruta PUT /:pid
-```bash
-http://localhost:8080/api/products/5
-```
-
-Toma un producto y lo actualiza por los campos enviados desde body. **NUNCA** se debe actualizar o eliminar el id al momento de hacer dicha actualización.
-
-## La ruta DELETE POST /
-```bash
-http://localhost:8080/api/products/1
-```
-elimina el producto con el pid indicado.
-

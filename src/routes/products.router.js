@@ -3,9 +3,9 @@ import { obtenerLimite, obtenerPorId, agregarProducto, obtenerTodo, actualizarPr
 
 const productsRouter = Router();
 
-productsRouter.get('/', obtenerTodo);
 productsRouter.get('/', obtenerLimite);
 productsRouter.get('/:pid', obtenerPorId);
+productsRouter.get('/', obtenerTodo);
 productsRouter.post('/', agregarProducto);
 productsRouter.put('/:pid', actualizarProducto);
 productsRouter.delete('/:pid', borrarProducto);
