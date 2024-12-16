@@ -27,7 +27,7 @@
     "description": "Cortada por David de Juda",
     "code": "1522sen",
     "price": 4200,
-    "status": "success",
+    "status": false,
     "stock": 12,
     "category": "Cocina",
     "thumbnails": []
@@ -122,6 +122,28 @@
   },
   {
     "id": "19",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "1",
+    "title": "Melena de Leon",
+    "description": "Cortada por David de Galilea",
+    "code": "1522sen",
+    "price": 42,
+    "status": true,
+    "stock": 12,
+    "category": "Cocina",
+    "thumbnails": []
+  },
+  {
+    "id": "1",
     "title": "Melena de Leon",
     "description": "Cortada por David de Galilea",
     "code": "1522sen",
