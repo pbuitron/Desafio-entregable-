@@ -127,7 +127,7 @@ npm install
 4. Inicia el servidor:
 
 ```bash
-node index.js
+npm run dev
 ```
 
 La API estará disponible en `http://localhost:8080/api`. 
