@@ -1,13 +1,18 @@
 import { Router } from "express";
-import { agregarCarrito, obtenercarritos, obtenercarritoPorId, productoEnCarrito, checkearStatusProducto} from "../controllers/cartscontrollers.js";
+import CartsManager from "../controllers/cartscontrollers.js";
 
 const cartsRouter = Router();
+const cartsManager = new CartsManager();
 
-cartsRouter.post('/', agregarCarrito)
-cartsRouter.get('/', obtenercarritos)
-cartsRouter.get('/:cid', obtenercarritoPorId)
-cartsRouter.post('/:cid/products/:pid', checkearStatusProducto, productoEnCarrito)
+cartsRouter.post('/', (req, res) => cartsManager.agregarCarrito(req, res));
 
+cartsRouter.get('/', (req, res) => cartsManager.obtenercarritos(req, res));
 
+cartsRouter.get('/:cid', (req, res) => cartsManager.obtenercarritoPorId(req, res));
 
-export default cartsRouter
+cartsRouter.post('/:cid/products/:pid', 
+    (req, res, next) => cartsManager.checkearStatusProducto(req, res, next), 
+    (req, res) => cartsManager.productoEnCarrito(req, res)
+);
+
+export default cartsRouter;

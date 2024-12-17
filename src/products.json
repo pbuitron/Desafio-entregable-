@@ -1,12 +1,56 @@
 [
   {
     "id": 1,
-    "title": "Veliver",
-    "description": "Pal que no ve, al inicio estaba sembrada en el jardin de Celia Cruz, pero despues José Feliciano se lo llevo",
-    "code": "Azuca02",
-    "price": 5,
+    "title": "Ruda",
+    "description": "para la buena suerte",
+    "code": "santa205",
+    "price": 125,
     "status": true,
-    "stock": 55,
+    "stock": 25,
+    "category": "Medicina",
+    "thumbnails": []
+  },
+  {
+    "id": 2,
+    "title": "Mastuerzo",
+    "description": "Usala para la buena suerte",
+    "code": "santa205",
+    "price": 200,
+    "status": false,
+    "stock": 25,
+    "category": "Medicina",
+    "thumbnails": []
+  },
+  {
+    "id": 3,
+    "title": "Lavanda",
+    "description": "para el el dolor del pellejo",
+    "code": "santa205",
+    "price": 125,
+    "status": true,
+    "stock": 25,
+    "category": "Medicina",
+    "thumbnails": []
+  },
+  {
+    "id": 4,
+    "title": "Ruda",
+    "description": "Usala para la buena suerte",
+    "code": "santa205",
+    "price": 200,
+    "status": false,
+    "stock": 25,
+    "category": "Medicina",
+    "thumbnails": []
+  },
+  {
+    "id": 5,
+    "title": "Lavanda",
+    "description": "para el el dolor del pellejo",
+    "code": "santa205",
+    "price": 125,
+    "status": true,
+    "stock": 25,
     "category": "Medicina",
     "thumbnails": []
   }

@@ -2,6 +2,7 @@
 
 ## Descripción
 Esta aplicación permite gestionar carritos de compras y productos. Los usuarios pueden crear carritos, agregar productos a ellos y consultar el contenido de cada carrito. La aplicación está construida utilizando Node.js y almacena los datos en archivos JSON.
+Cabe resaltar que todos los metodos han sido encapsulados dentro de su respectivo Manager para un mejor control de los métodos. 
 
 ## Estructura del Proyecto
 El proyecto está organizado en las siguientes carpetas y archivos:
