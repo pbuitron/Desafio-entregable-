@@ -3,6 +3,8 @@ import cartsRouter from './routes/carts.router.js';
 import productsRouter from './routes/products.router.js';
 import { engine } from 'express-handlebars';
 import viewRouter from './routes/views.routes.js';
+import { Server } from 'socket.io';
+import ProductManager from './controllers/productscontrollers.js';
 
 const app = express();
 app.use(express.json()); 
@@ -26,6 +28,18 @@ app.use('*', (req, res, next) => {
 });
 
 const PUERTO = process.env.PORT || 8080;
-app.listen(PUERTO, () => {
+
+const httpServer = app.listen(PUERTO, () => {
     console.log(`Server iniciado en  http://localhost:${PUERTO}/api`);
 });
+const productManager = new ProductManager('./src/products.json');
+
+const io = new Server(httpServer);
+
+io.on('connection', async(socket) =>{
+    console.log('Nuevo cliente conectado');
+
+socket.emit('productos', await productManager.obtenerTodo());
+})
+
+
