@@ -11,6 +11,9 @@ export let contadorItemProducts = 1;
 
 
 class ProductManager {
+    constructor() {
+        this.filePath = path.join(__dirname, '../products.json');
+    }
     async obtenerLimite(req, res) {
         const { limit } = req.query;
         try {
@@ -61,9 +64,14 @@ class ProductManager {
         console.log(`Se agregó producto a la lista `);
     }
 
-    async obtenerTodo(req, res) {
-        const products = await leerProducts(rutaProducts);
-        res.json(products);
+    async obtenerTodo() {
+        try {
+            const data = await fs.readFile(this.filePath, 'utf-8');
+            return JSON.parse(data);
+        } catch (error) {
+            console.error('Error al obtener productos:', error);
+            throw error;
+        }
     }
 
     async actualizarProducto(req, res) {

@@ -1,17 +1,25 @@
-import express, { urlencoded } from 'express';
+import express from 'express';
 import cartsRouter from './routes/carts.router.js';
 import productsRouter from './routes/products.router.js';
+import { engine } from 'express-handlebars';
+import viewRouter from './routes/views.routes.js';
 
 const app = express();
 app.use(express.json()); 
-app.use(express({urlencoded:true}))
+app.use(express.urlencoded({extended:true}))
+app.use(express.static('./src/public'))
+
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './src/views');
 
 
 app.use('/api/carts', cartsRouter);
 app.use('/api/products', productsRouter);
-app.get('/api', (req, res)=>{
-    res.send('Desafio Entregable Número 1')
-});
+app.use('/', viewRouter);
+
+
 app.use('*', (req, res, next) => {
     res.status(404).send('Página no existe');
     next()
