@@ -24,34 +24,14 @@
   {
     "id": 3,
     "title": "Lavanda",
-    "description": "para el el dolor del pellejo",
-    "code": "santa205",
-    "price": 125,
+    "description": "Ideal para perfumar tu cuarto cuando huele a pezuña",
+    "code": "123wer",
+    "price": 54,
     "status": true,
     "stock": 25,
-    "category": "Medicina",
-    "thumbnails": []
-  },
-  {
-    "id": 4,
-    "title": "Ruda",
-    "description": "Usala para la buena suerte",
-    "code": "santa205",
-    "price": 200,
-    "status": false,
-    "stock": 25,
-    "category": "Medicina",
-    "thumbnails": []
-  },
-  {
-    "id": 5,
-    "title": "Lavanda",
-    "description": "para el el dolor del pellejo",
-    "code": "santa205",
-    "price": 125,
-    "status": true,
-    "stock": 25,
-    "category": "Medicina",
-    "thumbnails": []
+    "category": "Flores",
+    "thumbnails": [
+      ""
+    ]
   }
 ]
