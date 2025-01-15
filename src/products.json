@@ -11,24 +11,39 @@
     "thumbnails": []
   },
   {
-    "id": 2,
-    "title": "Mastuerzo",
-    "description": "Usala para la buena suerte",
-    "code": "santa205",
-    "price": 200,
-    "status": false,
-    "stock": 25,
-    "category": "Medicina",
-    "thumbnails": []
+    "id": 4,
+    "title": "Hierba Santa",
+    "description": "Para la garganta",
+    "code": "45232sd",
+    "price": 45,
+    "status": true,
+    "stock": 100,
+    "category": "Flores",
+    "thumbnails": [
+      ""
+    ]
   },
   {
-    "id": 3,
-    "title": "Lavanda",
-    "description": "Ideal para perfumar tu cuarto cuando huele a pezuña",
-    "code": "123wer",
-    "price": 54,
+    "id": 5,
+    "title": "Rosa Anacarada",
+    "description": "Flores para Obatala",
+    "code": "gfd584",
+    "price": 56,
     "status": true,
-    "stock": 25,
+    "stock": 85,
+    "category": "Flores",
+    "thumbnails": [
+      ""
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Girasoles",
+    "description": "Por culpa de Floricienta ahora la compras",
+    "code": "gira154",
+    "price": 50,
+    "status": true,
+    "stock": 150,
     "category": "Flores",
     "thumbnails": [
       ""

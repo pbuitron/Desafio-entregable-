@@ -1,87 +1,295 @@
-/* From Uiverse.io by alexruix */ 
-.form-box {
-    display: flex;
-    
-    max-width: 300px;
-    background: #f1f7fe;
-    overflow: hidden;
-    border-radius: 16px;
-    color: #010101;
-  }
-  
-  .form {
-    -ms-flex-align: center;
-    flex-direction: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 32px 24px 24px;
-    gap: 16px;
+.title{
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
     text-align: center;
-  }
+    margin-top: 2rem;
+    font-family: roboto, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   
-  /*Form text*/
-  .title {
-    font-weight: bold;
-    font-size: 1.6rem;
+
+}
+
+.product-card {
+  max-width: 100px; /* Ajusta el ancho máximo de cada tarjeta */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.5rem;
+  width: 100%; /* Asegura que la tarjeta ocupe el ancho completo dentro de su contenedor */
+  box-sizing: border-box;
+}
+
+/* Media query para pantallas medianas */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 45%; /* Ajusta el ancho para que quepan dos productos por fila */
   }
-  
-  .subtitle {
-    font-size: 1rem;
-    color: #666;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%; /* Ajusta el ancho para que quepa un producto por fila */
   }
-  
-  /*Inputs box*/
-  .form-container {
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #fff;
-    margin: 1rem 0 .5rem;
-    width: 100%;
-  }
-  
-  .input {
-    background: none;
-    border: 0;
-    outline: 0;
-    height: 40px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    font-size: .9rem;
-    padding: 8px 15px;
-  }
-  
-  .form-section {
-    padding: 16px;
-    font-size: .85rem;
-    background-color: #e0ecfb;
-    box-shadow: rgb(0 0 0 / 8%) 0 -1px;
-  }
-  
-  .form-section a {
-    font-weight: bold;
-    color: #0066ff;
-    transition: color .3s ease;
-  }
-  
-  .form-section a:hover {
-    color: #005ce6;
-    text-decoration: underline;
-  }
-  
-  /*Button*/
-  .form button {
-    background-color: #0066ff;
-    color: #fff;
-    border: 0;
-    border-radius: 24px;
-    padding: 10px 16px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color .3s ease;
-  }
-  
-  .form button:hover {
-    background-color: #005ce6;
-  }
+}
+
+/* Resto del código existente */
+.product-image-container {
+  position: relative;
+  padding: 0.625rem;
+  height: 24rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-clip: border-box;
+}
+
+.product-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.product-content {
+  padding: 1rem;
+}
+
+.product-header {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-title {
+  color: rgb(30 41 59);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.product-price {
+  color: rgb(8 145 178);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.product-description {
+  color: rgb(71 85 105);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.products-container {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 4rem); /* Ajusta la altura máxima para que no se desborde */
+}
+
+.form-container {
+  flex: 1;
+  padding: 1rem;
+  max-height: calc(100vh - 4rem); /* Ajusta la altura máxima para que no se desborde */
+  overflow-y: auto;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+input, select, button {
+  margin-bottom: 1rem;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.appearance-none {
+  appearance: none;
+}
+
+.border {
+  border-width: 1px;
+}
+
+
+.w-full {
+  width: 100%;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+
+.bg-white {
+  background-color: #fff;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.bg-blue-500 {
+  background-color: #4299e1;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #2b6cb0;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; /* Ajusta el ancho máximo de cada tarjeta */
+  min-width: 200px;
+  margin: 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(30 41 59);
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  color: rgb(71 85 105);
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  color: rgb(8 145 178);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-status {
+  color: rgb(30 41 59);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.delete-button {
+  background-color: rgb(220 38 38);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: rgb(185 28 28);
+}

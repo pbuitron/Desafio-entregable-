@@ -1,21 +1,26 @@
-<h1>Real Time</h1>
+<h1 class="title">Dashboard Productos</h1>
 
-<div id="contenedor-productos"></div>
+<div class="dashboard-container">
+  <div class="products-container" id="contenedor-productos"></div>
 
-<form id="productForm">
-    <input type="text" id="title" placeholder="Título" required>
-    <input type="text" id="description" placeholder="Descripción" required>
-    <input type="text" id="code" placeholder="Código" required>
-    <input type="number" id="price" placeholder="Precio" required>
-    <input type="number" id="stock" placeholder="Stock" required>
-    <input type="text" id="category" placeholder="Categoría" required>
-    <input type="text" id="thumbnails" placeholder="Thumbnails (separados por comas)">
-    <select id="status" required>
+  <div class="form-container">
+    <h2 class="form-title">Agregar Nuevo Producto</h2>
+    <form id="productForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <input type="text" id="title" placeholder="Título" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <input type="text" id="description" placeholder="Descripción" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <input type="text" id="code" placeholder="Código" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <input type="number" id="price" placeholder="Precio" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <input type="number" id="stock" placeholder="Stock" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <input type="text" id="category" placeholder="Categoría" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <input type="text" id="thumbnails" placeholder="Thumbnails (separados por comas)" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <select id="status" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         <option value="true">Activo</option>
         <option value="false">Inactivo</option>
-    </select>
-    <button type="submit">Agregar Producto</button>
-</form>
+      </select>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Agregar Producto</button>
+    </form>
+  </div>
+</div>
 
 <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
 <script src="js/socket.js"></script>
